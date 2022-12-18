@@ -58,7 +58,7 @@ function commands.getBlockInfo(x, y, z , dimension) end
 ---@generic
 --- The built-in commands API, without any generated command helper functions.
 --- This may be useful if a built-in function (such as [commands.list]) has been overwritten by a command.
-native = {}
+commands.native = {}
 
 ---@generic
 --- A table containing asynchronous wrappers for all commands. As with [commands.execAsync],

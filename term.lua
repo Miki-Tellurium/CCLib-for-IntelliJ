@@ -185,7 +185,7 @@ function Redirect.scroll(y) end
 ---@return number The x and y position of the cursor
 function Redirect.getCursorPos() end
 
---- Set the position of the cursor. terminal writes will begin from this position.
+--- Set the position of the cursor. Terminal writes will begin from this position.
 ---@param x number The new x position of the cursor
 ---@param y number The new y position of the cursor
 function Redirect.setCursorPos(x, y) end
@@ -237,7 +237,7 @@ function Redirect.getBackgroundColour() end
 function Redirect.setBackgroundColor(color) end
 
 --- Set the current background colour. This is used when writing text and clearing the terminal.
----@param color number The new background colour
+---@param colour number The new background colour
 function Redirect.setBackgroundColour(colour) end
 
 --- Determine if this terminal supports color. Terminals which do not support color will still

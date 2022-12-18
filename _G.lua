@@ -45,11 +45,11 @@ function read(replaceChar, history, completeFn, default) end
 ---@generic
 --- Stores the current ComputerCraft and Minecraft versions. Outside of Minecraft
 --- (for instance, in an emulator) _HOST will contain the emulator's version instead.
-_HOST = nil
+_HOST = {}
 
 ---@generic
 --- The default computer settings as defined in the ComputerCraft configuration.
 --- This is a comma-separated list of settings pairs defined by the mod configuration
 --- or server owner. By default, it is empty.
-_CC_DEFAULT_SETTINGS = nil
+_CC_DEFAULT_SETTINGS = {}
 

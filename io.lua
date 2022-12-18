@@ -10,16 +10,16 @@ io ={}
 
 --- A file handle representing the "standard input". Reading from this file will prompt the user for input.
 ---@type Handle
-io.stdin = nil
+io.stdin = {}
 
 --- A file handle representing the "standard output". Writing to this file will display the written text to the screen.
 ---@type Handle
-io.stdout = nil
+io.stdout = {}
 
 --- A file handle representing the "standard error" stream.
 --- One may use this to display error messages, writing to it will display them on the terminal.
 ---@type Handle
-io.stderr = nil
+io.stderr = {}
 
 --- Closes the provided file handle.
 ---@param file Handle The file handle to close, defaults to the current output file
@@ -84,17 +84,17 @@ local Handle = {}
 
 --- Close this file handle, freeing any resources it uses. Throws if this handle was already closed.
 ---@return boolean | nil | string Return true if this handle was successfully closed or nil if this file handle could not be closed  and the reason it could not be closed
-function Handle:close() end
+function Handle.close() end
 
 --- Flush any buffered output, forcing it to be written to the file. Throws if the handle has been closed.
-function Handle:flush() end
+function Handle.flush() end
 
 --- Returns an iterator that, each time it is called, returns a new line from the file. This can be used in
 --- a for loop to iterate over all lines of a file. Once the end of the file has been reached, nil will be
 --- returned. The file is not automatically closed. Throws if the file cannot be opened for reading.
 ---@param ... any The argument to pass to [Handle:read] for each line
 ---@return string | nil The line iterator
-function Handle:lines(...) end
+function Handle.lines(...) end
 
 --- Reads data from the file, using the specified formats. For each format provided, the function returns
 --- either the data read, or nil if no data could be read. The following formats are available:
@@ -106,7 +106,7 @@ function Handle:lines(...) end
 --- If no format is provided, l is assumed.
 ---@param ... string The formats to use
 ---@return string | nil The data read from the file
-function Handle:read(...) end
+function Handle.read(...) end
 
 --- Seeks the file cursor to the specified position, and returns the new position.
 --- whence controls where the seek operation starts, and is a string that may be one of these three values:
@@ -118,16 +118,16 @@ function Handle:read(...) end
 ---@param whence string | nil The place to set the cursor from
 ---@param offset number | nil The offset from the start to move to
 ---@return number The new location of the file cursor
-function Handle:seek(whence, offset) end
+function Handle.seek(whence, offset) end
 
 ---@deprecated
 --- Sets the buffering mode for an output file.
 --- This has no effect under ComputerCraft, and exists with compatility with base Lua.
 ---@param mode string The buffering mode
 ---@param size number | nil The size of the buffer
-function Handle:setvbuf(mode, size) end
+function Handle.setvbuf(mode, size) end
 
 --- Write one or more values to the file.
 ---@param ... string | number The values to write
 ---@return Handle The current file, allowing chained calls or nil if the file could not be written to and the error message which occurred while writing
-function Handle:write(...) end
+function Handle.write(...) end

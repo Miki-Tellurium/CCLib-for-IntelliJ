@@ -64,28 +64,58 @@ local Websocket = {}
 --- Wait for a message from the server. Throws if the websocket has been closed.
 ---@param timeout number | nil The number of seconds to wait if no message is received
 ---@return string | boolean | nil The received message, if this was a binary message, if the websocket was closed while waiting, or if we timed out
-function Websocket:receive(timeout) end
+function Websocket.receive(timeout) end
 
 --- Send a websocket message to the connected server. Throws if the message is too large or
 --- if the websocket has been closed.
 ---@param message any The message to send
 ---@param binary boolean | nil Whether this message should be treated as a binary
-function Websocket:send(message, binary) end
+function Websocket.send(message, binary) end
 
 --- Close this websocket. This will terminate the connection, meaning messages can no longer be sent or received along it.
-function Websocket:close() end
+function Websocket.close() end
 
---To add: file methods
+
 --- A http response. This provides the same methods as a file (or binary file if the request used binary mode),
 --- though provides several request specific methods.
 ---@class Response
 local Response = {}
 
+--- Read a line from the file. Throws if the file has been closed.
+---@param withTrailing boolean | nil Whether to include the newline characters with the returned string, defaults to false
+---@return string | nil The read line or nil if at the end of the file
+function Response.readLine(withTrailing) end
+
+--- Read the remainder of the file. Throws if the file has been closed.
+---@return nil | string The remaining contents of the file, or nil if we are at the end
+function Response.readAll() end
+
+--- Read a number of characters from this file. Throws when trying to read a negative number of characters
+--- or if the file has been closed.
+---@param count number | nil The number of characters to read, defaulting to 1
+---@return string | nil The read characters, or nil if at the of the file
+function Response.read(count) end
+
+--- Close this file, freeing any resources it uses. Throws if the file has already been closed.
+--- Once a file is closed it may no longer be read or written to.
+function Response.close() end
+
+--- Seek to a new position within the file, changing where bytes are written to. The new position is an offset
+--- given by offset, relative to a start position determined by whence:
+--- "set": offset is relative to the beginning of the file;
+--- "cur": Relative to the current position. This is the default;
+--- "end": Relative to the end of the file;
+--- In case of success, seek returns the new file position from the beginning of the file. Throws if the file has been closed.
+---@param whence string | nil Where the offset is relative to
+---@param offset number | nil The offset to seek to
+---@return number | nil | string The new position or nil if seeking failed and the reason seeking failed
+function Response.seek(whence, offset) end
+
 --- Returns the response code and response message returned by the server.
 ---@return number | string The response code (i.e. 200), the response message (i.e. "OK")
-function Response:getResponseCode() end
+function Response.getResponseCode() end
 
 --- Get a table containing the response's headers, in a format similar to that required by [http.request].
 --- If multiple headers are sent with the same name, they will be combined with a comma.
 ---@return string The response's headers
-function Response:getResponseHeaders() end
+function Response.getResponseHeaders() end

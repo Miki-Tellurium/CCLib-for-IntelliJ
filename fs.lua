@@ -149,16 +149,16 @@ local BinaryReadHandle = {}
 --- file has been closed.
 ---@param count number | nil The number of bytes to read; when absent, a single byte will be read as a number (this may be 0 to determine we are at the end of the file)
 ---@return nil | number | string Returns nil if we are at the end of the file or the value of the byte read (this is returned when the count is absent)or the bytes read as a string
-function BinaryReadHandle:read(count) end
+function BinaryReadHandle.read(count) end
 
 --- Read the remainder of the file. Throws if the file has been closed.
 ---@return string | nil The remaining contents of the file, or nil if we are at the end
-function BinaryReadHandle:readAll() end
+function BinaryReadHandle.readAll() end
 
 --- Read a line from the file. Throws if file has been closed.
 ---@param withTrailing boolean | nil Whether to include the newline characters with the returned string, defaults to false
 ---@return string | nil The read line or nil if at the end of the file
-function BinaryReadHandle:readLine(withTrailing) end
+function BinaryReadHandle.readLine(withTrailing) end
 
 --- Seek to a new position within the file, changing where bytes are written to. The new position is an offset
 --- given by offset, relative to a start position determined by whence:
@@ -169,11 +169,11 @@ function BinaryReadHandle:readLine(withTrailing) end
 ---@param whence string | nil Where the offset is relative to
 ---@param offset number | nil The offset to seek to
 ---@return number | nil | string The new position or nil if seeking failed and the reason seeking failed
-function BinaryReadHandle:seek(whence, offset) end
+function BinaryReadHandle.seek(whence, offset) end
 
 --- Close this file, freeing any resources it uses. Once a file is closed it may no longer be read or written to.
 --- Throws if the file has already been closed.
-function BinaryReadHandle:close() end
+function BinaryReadHandle.close() end
 
 
 --- A file handle opened with [fs.open] with the "r" mode.
@@ -183,21 +183,21 @@ local ReadHandle = {}
 --- Read a line from the file. Throws if the file has been closed.
 ---@param withTrailing boolean | nil Whether to include the newline characters with the returned string, defaults to false
 ---@return string | nil The read line or nil if at the end of the file
-function ReadHandle:readLine(withTrailing) end
+function ReadHandle.readLine(withTrailing) end
 
 --- Read the remainder of the file. Throws if the file has been closed.
 ---@return nil | string The remaining contents of the file, or nil if we are at the end
-function ReadHandle:readAll() end
+function ReadHandle.readAll() end
 
 --- Read a number of characters from this file. Throws when trying to read a negative number of characters
 --- or if the file has been closed.
 ---@param count number | nil The number of characters to read, defaulting to 1
 ---@return string | nil The read characters, or nil if at the of the file
-function ReadHandle:read(count) end
+function ReadHandle.read(count) end
 
 --- Close this file, freeing any resources it uses. Throws if the file has already been closed.
 --- Once a file is closed it may no longer be read or written to.
-function ReadHandle:close() end
+function ReadHandle.close() end
 
 
 --- A file handle opened by [fs.open] using the "w" or "a" modes.
@@ -206,18 +206,18 @@ local WriteHandle = {}
 
 --- Write a string of characters to the file. Throws if the file has been closed.
 ---@param value any The value to write to the file
-function WriteHandle:write(value) end
+function WriteHandle.write(value) end
 
 --- Write a string of characters to the file, follwing them with a new line character. Throws if the file has been closed.
 ---@param value any The value to write to the file
-function WriteHandle:writeLine(value) end
+function WriteHandle.writeLine(value) end
 
 --- Save the current file without closing it. Throws if the file has been closed.
-function WriteHandle:flush() end
+function WriteHandle.flush() end
 
 --- Close this file, freeing any resources it uses. Once a file is closed it may no longer be read or written to.
 --- Throws if the file has already been closed.
-function WriteHandle:close() end
+function WriteHandle.close() end
 
 
 --- A file handle opened by [fs.open] using the "wb" or "ab" modes.
@@ -226,14 +226,14 @@ local BinaryWriteHandle = {}
 
 --- Write a string or byte to the file. Throws if the file has been closed.
 ---@param ... number | string byte to write or the string to write
-function BinaryWriteHandle:write(...) end
+function BinaryWriteHandle.write(...) end
 
 --- Save the current file without closing it. Throws if the file has been closed.
-function BinaryWriteHandle:flush() end
+function BinaryWriteHandle.flush() end
 
 --- Close this file, freeing any resources it uses. Once a file is closed it may no longer be read or written to.
 --- Throws if the file has already been closed.
-function BinaryWriteHandle:close() end
+function BinaryWriteHandle.close() end
 
 --- Seek to a new position within the file, changing where bytes are written to. The new position is an offset
 --- given by offset, relative to a start position determined by whence:
@@ -244,4 +244,4 @@ function BinaryWriteHandle:close() end
 ---@param whence string | nil Where the offset is relative to
 ---@param offset number | nil The offset to seek to
 ---@return number | nil | string The new position or nil if seeking failed and the reason seeking failed
-function BinaryWriteHandle:seek(whence, offset) end
+function BinaryWriteHandle.seek(whence, offset) end
