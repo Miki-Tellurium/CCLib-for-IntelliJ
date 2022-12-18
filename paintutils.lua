@@ -4,8 +4,7 @@
 ---
 --- This library requires EmmyLua plugin for IntelliJ IDEA to work properly
 
----@generic Utilities for drawing more complex graphics, such as pixels, lines and images.
-
+--- Utilities for drawing more complex graphics, such as pixels, lines and images.
 ---@class paintutils
 paintutils = {}
 

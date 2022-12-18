@@ -4,10 +4,10 @@
 ---
 --- This library requires EmmyLua plugin for IntelliJ IDEA to work properly
 
----@generic Find and control peripherals attached to this computer.
+--- Find and control peripherals attached to this computer.
 --- Peripherals are blocks (or turtle and pocket computer upgrades) which can be controlled by
---- a computer. For instance, the speaker peripheral allows a computer to play music and the
---- monitor peripheral allows you to display text in the world.
+--- a computer. For instance, the [speaker] peripheral allows a computer to play music and the
+--- [monitor] peripheral allows you to display text in the world.
 --- Computers can interact with adjacent peripherals. Each peripheral is given a name based
 --- on which direction it is in. For instance, a disk drive below your computer will be called
 --- "bottom" in your Lua code, one to the left called "left" , and so on for all 6 directions
@@ -17,7 +17,6 @@
 --- against that block. You can then right click the modem to use (or attach) the peripheral.
 --- This will print a peripheral name to chat, which can then be used just like a direction name
 --- to access the peripheral. You can click on the message to copy the name to your clipboard.
-
 ---@class peripheral
 peripheral = {}
 
@@ -356,14 +355,14 @@ function monitor.isColour() end
 
 --- Writes text to the terminal with the specific foreground and background characters.
 --- As with [write], the text will be written at the current cursor location, with the
---- cursor moving to the end of the text. textColour and backgroundColour must both be
+--- cursor moving to the end of the text. textColor and backgroundColor must both be
 --- strings the same length as text. All characters represent a single hexadecimal digit,
 --- which is converted to one of CC's colors. For instance, "a" corresponds to purple.
 --- Throws if the three inputs are not the same length.
 ---@param text string The text to write
----@param textColour string The corresponding text colors
----@param backgroundColour string The corresponding background colors
-function monitor.blit(text, textColour, backgroundColour) end
+---@param textColor string The corresponding text colors
+---@param backgroundColor string The corresponding background colors
+function monitor.blit(text, textColor, backgroundColor) end
 
 --- Set the palette for a specific color. ComputerCraft's palette system allows
 --- you to change how a specific color should be displayed. For instance, you can
@@ -399,7 +398,7 @@ function monitor.getPaletteColor(color) end
 --- Get the current palette for a specific colour.
 ---@param colour number The colour whose palette should be fetched
 ---@return number | number | number The red, green and blue channels, will be between 0 and 1
-function monitor.getPaletteColor(colour) end
+function monitor.getPaletteColour(colour) end
 
 
 --- The printer peripheral allows pages and books to be printed.

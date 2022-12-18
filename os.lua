@@ -4,8 +4,7 @@
 ---
 --- This library requires EmmyLua plugin for IntelliJ IDEA to work properly
 
----@generic The os API allows interacting with the current computer.
-
+--- The os API allows interacting with the current computer.
 ---@class os
 os = {}
 

@@ -4,8 +4,7 @@
 ---
 --- This library requires EmmyLua plugin for IntelliJ IDEA to work properly
 
----@generic Make HTTP requests, sending and receiving data to a remote web server.
-
+--- Make HTTP requests, sending and receiving data to a remote web server.
 ---@class http
 http ={}
 

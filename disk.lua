@@ -4,11 +4,10 @@
 ---
 --- This library requires EmmyLua plugin for IntelliJ IDEA to work properly
 
----@generic Interact with disk drives.
+--- Interact with disk drives.
 --- These functions can operate on locally attached or remote disk drives.
 --- To use a locally attached drive, specify “side” as one of the six sides (e.g. left);
 --- to use a remote disk drive, specify its name as printed when enabling its modem (e.g. drive_0).
-
 ---@class disk
 disk = {}
 

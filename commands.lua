@@ -3,17 +3,9 @@
 ---@Copyright (c) 2022 MIT License
 ---
 
----@generic Execute Minecraft commands and gather data from the results from a command computer.
---- While one may use commands.exec directly to execute a command, the commands API also provides
---- helper methods to execute every command. For instance:
---- commands.say("Hi!")
---- is equivalent to
---- commands.exec("say Hi!").
---- [commands.async] provides a similar interface to execute asynchronous commands:
---- commands.async.say("Hi!")
---- is equivalent to
---- commands.execAsync("say Hi!").
-
+--- Execute Minecraft commands and gather data from the results from a command computer.
+--- While one may use [commands.exec] directly to execute a command, the [commands] API also provides
+--- helper methods to execute every command.
 ---@class commands
 commands = {}
 

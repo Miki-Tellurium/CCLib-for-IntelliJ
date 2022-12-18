@@ -4,9 +4,8 @@
 ---
 --- This library requires EmmyLua plugin for IntelliJ IDEA to work properly
 
---- @generic Control the current pocket computer, adding or removing upgrades. This API is only available
+--- Control the current pocket computer, adding or removing upgrades. This API is only available
 --- on pocket computers. As such, you may use its presence to determine what kind of computer you are using.
-
 ---@class pocket
 pocket = {}
 

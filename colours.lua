@@ -4,8 +4,8 @@
 ---
 --- This library requires EmmyLua plugin for IntelliJ IDEA to work properly
 
----@generic An alternative version of colors for lovers of British spelling.
-
+--Note: even if I'm from Europe I still prefer the American spelling
+--- An alternative version of [colors] for lovers of British spelling.
 ---@class colours
 colours = {}
 

@@ -4,16 +4,15 @@
 ---
 --- This library requires EmmyLua plugin for IntelliJ IDEA to work properly
 
----@generic Multishell allows multiple programs to be run at the same time.
+--- Multishell allows multiple programs to be run at the same time.
 --- When multiple programs are running, it displays a tab bar at the top of the screen,
 --- which allows you to switch between programs. New programs can be launched using the fg
 --- or bg programs, or using the [shell.openTab] and [multishell.launch] functions.
 --- Each process is identified by its ID, which corresponds to its position in the tab list.
 --- As tabs may be opened and closed, this ID is not constant over a program's run. As such,
---- be careful not to use stale IDs. As with shell, multishell is not a "true" API. Instead,
+--- be careful not to use stale IDs. As with [shell], [multishell] is not a "true" API. Instead,
 --- it is a standard program, which launches a shell and injects its API into the shell's
 --- environment. This API is not available in the global environment, and so is not available to APIs.
-
 ---@class multishell
 multishell ={}
 

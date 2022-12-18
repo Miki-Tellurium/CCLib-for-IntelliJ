@@ -4,13 +4,12 @@
 ---
 --- This library requires EmmyLua plugin for IntelliJ IDEA to work properly
 
----@generic Interact with the computer's files and filesystem, allowing you to manipulate files, directories and paths.
+--- Interact with the computer's files and filesystem, allowing you to manipulate files, directories and paths.
 --- This includes:
---- *Reading and writing files: call open to obtain a file "handle", which can be used to read from or write to a file.
---- *Path manipulation: manipulating file paths, joining them together or extracting components.
---- *Querying paths: for instance, checking if a file exists, or whether it's a directory.
---- *File and directory manipulation: moving or copying files.
-
+--- * Reading and writing files: call open to obtain a file "handle", which can be used to read from or write to a file.
+--- * Path manipulation: manipulating file paths, joining them together or extracting components.
+--- * Querying paths: for instance, checking if a file exists, or whether it's a directory.
+--- * File and directory manipulation: moving or copying files.
 ---@class fs
 fs = {}
 

@@ -4,9 +4,8 @@
 ---
 --- This library requires EmmyLua plugin for IntelliJ IDEA to work properly
 
----@generic Functions in the global environment, defined in bios.lua.
+--- Functions in the global environment, defined in bios.lua.
 --- This does not include standard Lua functions.
-
 ---@class _G
 _G = {}
 

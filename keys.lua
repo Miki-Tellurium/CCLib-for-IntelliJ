@@ -4,11 +4,10 @@
 ---
 --- This library requires EmmyLua plugin for IntelliJ IDEA to work properly
 
----@generic Constants for all keyboard "key codes", as queued by the key event.
+--- Constants for all keyboard "key codes", as queued by the [key] event.
 --- These values are not guaranteed to remain the same between versions. It is
 --- recommended that you use the constants provided by this file, rather than the
 --- underlying numerical values.
-
 ---@class keys
 keys = {}
 

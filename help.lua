@@ -4,8 +4,7 @@
 ---
 --- This library requires EmmyLua plugin for IntelliJ IDEA to work properly
 
----@generic Find help files on the current computer.
-
+--- Find help files on the current computer.
 ---@class help
 help = {}
 
