@@ -30,7 +30,7 @@ window = {}
 --- to the [term] API for a list of functions available to it. [term] itself may not be passed as
 --- the parent, though [term.native] is acceptable. Generally, [term.current] or a wrapped monitor
 --- will be most suitable, though windows may even have other windows assigned as their parents.
----@param parent Redirect The parent terminal redirect to draw to
+---@param parent term The parent terminal redirect to draw to
 ---@param nX number The x coordinate this window is drawn at in the parent terminal
 ---@param nY number The y coordinate this window is drawn at in the parent terminal
 ---@param nWidth number The width of this window
@@ -38,7 +38,6 @@ window = {}
 ---@param bStartVisible boolean | nil Whether this window is visible by default, defaults to true
 ---@return Window The constructed window
 function window.create(parent, nX, nY, nWidth, nHeight, bStartVisible) end
-
 
 --- The window object. Refer to the module's documentation for a full description.
 ---@class Window
