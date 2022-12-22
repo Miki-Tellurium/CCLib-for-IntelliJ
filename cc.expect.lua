@@ -15,7 +15,7 @@ expect = {}
 ---@param value any The argument's value
 ---@param ... string The allowed types of the argument
 ---@return any The given value
-function expect(index, value, ...) end
+function expect.expect(index, value, ...) end
 
 --- Expect a field to have a specific type. Throws if the field
 --- is not one of the allowed types.
@@ -23,7 +23,7 @@ function expect(index, value, ...) end
 ---@param index string The field name to check
 ---@param ... string The allowed types of the argument
 ---@return any The contents of the given field
-function field(tbl, index, ...) end
+function expect.field(tbl, index, ...) end
 
 --- Expect a number to be within a specific range. Throws
 --- if the value is outside of the allowed range.
@@ -31,4 +31,4 @@ function field(tbl, index, ...) end
 ---@param min number The minimum value, if nil then [math.huge] is used
 ---@param max number The maximum value, if nil then [math.huge] is used
 ---@return number The given value
-function range(num, min, max) end
+function expect.range(num, min, max) end
