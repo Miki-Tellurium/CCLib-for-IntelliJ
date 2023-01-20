@@ -63,13 +63,13 @@ function peripheral.call(name, method, ...) end
 --- Get a table containing all functions available on a peripheral. These can then be called
 --- instead of using [peripheral.call] every time.
 ---@param name string The name of the peripheral to wrap
----@return command_peripheral | computer_peripheral | disk_peripheral | modem_peripheral | monitor_peripheral| printer_peripheral | speaker_peripheral | energy_storage_peripheral | fluid_storage_peripheral | inventory_peripheral | chatbox_peripheral | environment_detector | player_detector | me_bridge | rs_bridge | energy_detector | AR_controller | inventory_manager | redstone_integrator | block_reader | NBT_storage | geo_scanner | colony_integrator | beacon | noteblock | nil The table containing the peripheral's methods, or nil if there is no peripheral present with the given name
+---@return command_peripheral | computer_peripheral | disk_peripheral | modem_peripheral | monitor_peripheral| printer_peripheral | speaker_peripheral | energy_storage_peripheral | fluid_storage_peripheral | inventory_peripheral | nil The table containing the peripheral's methods, or nil if there is no peripheral present with the given name
 function peripheral.wrap(name) end
 
 --- Find all peripherals of a specific type, and return the wrapped peripherals.
 ---@param type string The type of peripheral to look for
 ---@param filter function A filter function, which takes the peripheral's name and wrapped table and returns if it should be included in the result
----@return command_peripheral | computer_peripheral | disk_peripheral | modem_peripheral | monitor_peripheral| printer_peripheral |speaker_peripheral | energy_storage_peripheral | fluid_storage_peripheral | inventory_peripheral | chatbox_peripheral | environment_detector | player_detector | me_bridge | rs_bridge | energy_detector | AR_controller | inventory_manager | redstone_integrator | block_reader | NBT_storage | geo_scanner | colony_integrator | beacon | noteblock | nil Zero or more wrapped peripherals matching the given filters
+---@return command_peripheral | computer_peripheral | disk_peripheral | modem_peripheral | monitor_peripheral| printer_peripheral |speaker_peripheral | energy_storage_peripheral | fluid_storage_peripheral | inventory_peripheral | nil Zero or more wrapped peripherals matching the given filters
 function peripheral.find(type, filter) end
 
 
