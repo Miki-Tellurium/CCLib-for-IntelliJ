@@ -901,3 +901,80 @@ function noteblock.changeNoteBy(note) end
 --- Returns the note if successful, -1 if not successful.
 ---@return number
 function noteblock.changeNote() end
+
+
+--- Mana generating flowers from botania can generate mana for other recipes or rituals.
+---@class flower
+flower = {}
+
+--- Returns the capacity for mana.
+---@return number
+function flower.getMaxMana() end
+
+--- Returns the stored mana.
+---@return number
+function flower.getMana() end
+
+--- Returns true if the flower is a floating flower.
+---@return boolean
+function flower.isFloating() end
+
+--- Returns true if the flower is on enchanted soil.
+---@return boolean
+function flower.isOnEnchantedSoil()	end
+
+
+--- Mana pools can store mana. They're also used to craft items.
+---@class mana_pool
+mana_pool ={}
+
+--- Returns the stored mana.
+---@return number
+function mana_pool.getMana() end
+
+--- Returns the capacity for mana.
+---@return number
+function mana_pool.getMaxMana()	end
+
+--- Returns the amount which is needed to fill the pool.
+---@return number
+function mana_pool.getManaNeeded() end
+
+--- Returns true if the spreader is empty.
+---@return boolean
+function mana_pool.isEmpty() end
+
+--- Returns true if the spreader is full.
+---@return boolean
+function mana_pool.isFull()	end
+
+
+--- Mana spreaders can transfer mana from one source to another.
+---@class mana_spreader
+mana_spreader = {}
+
+--- Returns the stored mana.
+---@return number
+function mana_spreader.getMana() end
+
+---	Returns the capacity for mana.
+---@return number
+function mana_spreader.getMaxMana() end
+
+--- Returns true if the spreader is empty.
+---@return boolean
+function mana_spreader.isEmpty() end
+
+--- Returns true if the spreader is full.
+---@return boolean
+function mana_spreader.isFull() end
+
+--- Returns the variant of the spreader.
+---@return string
+function mana_spreader.getVariant() end
+
+--- Returns the coordinates of the target of the spreader.
+---@return table
+function mana_spreader.getBounding() end
+
+
