@@ -978,3 +978,69 @@ function mana_spreader.getVariant() end
 function mana_spreader.getBounding() end
 
 
+--- A basin can hold items and fluids for processing crafting recipes with create.
+---@class basin
+basin = {}
+
+--- Returns all fluids in the input tank of the basin.
+---@return table
+function basin.getInputFluids()	end
+
+--- Returns all fluids in the output tank of the basin.
+---@return table
+function basin.getOutputFluids() end
+
+--- Returns the filter of the basin as item.
+---@return table
+function basin.getFilter() end
+
+--- Returns a table with all items in the basin.
+---@return table
+function basin.getInventory() end
+
+
+--- A blaze burner uses blaze rods or other fuel types to heat up things above it.
+--- As example a basin or a fluid tank.
+---@class blaze_burner
+blaze_burner = {}
+
+--- Returns a table with information about the burner. fuelType, heatLevel, remainingBurnTime and isCreative.
+---@return table
+function blaze_burner.getInfo()	end
+
+
+--- A Fluid Tank is a multiblock structure which can hold fluids. 8k mb per block.
+---@class fluid_tank
+fluid_tank =  {}
+
+--- Returns a table with information about the tank. capacity, amount, fluid and isBoiler.
+---@return table
+function fluid_tank.getInfo() end
+
+
+--- A mechanical mixer with a basin can process several shapeless recipes plus a couple extra ones.
+---@class mechanical_mixer
+mechanical_mixer = {}
+
+--- Returns true if the mixer is currently running.
+---@return boolean
+function mechanical_mixer.isRunning() end
+
+--- Returns true if the mixer has a basin.
+---@return boolean
+function mechanical_mixer.hasBasin() end
+
+
+--- This integration works for all blocks with any type of a scroll value
+--- behaviour. Like the speed controller or the creative motor.
+---@class scroll_blocks
+scroll_blocks = {}
+
+--- Sets the target speed/value of the behaviour. Returns true if successful.
+---@param number int
+---@return boolean
+function scroll_blocks.setTargetSpeed(int) end
+
+--- Returns the target speed/value of the behaviour.
+---@return number
+function scroll_blocks.getTargetSpeed()	end
